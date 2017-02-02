@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HangMan Proto</title>
+	
+	<link rel="stylesheet" type= "text/css" href = "assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Sunshiney">
+	 <script
+ src="https://code.jquery.com/jquery-3.1.1.min.js"
+ integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+ crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+	<header>
+		<div class = "alphabet"> a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
+	</header>
+<div class = "wrap">
+	<div class = "gameplayArea">
+		<div class = "userInput">Guess: <input type = "text" id = "inputBox" size = "1"></div>
+
+			<div class = "buttons">
+				<div id = "startButton">
+					<button onclick = "startFunction()">Start</button>
+				</div>
+				<div id = "resetButton">
+					<button onclick = "resetFunction()">Reset</button>
+				</div>
+				<div id = "underscoreBox"></div>
+			</div>
+				<input type = "text" id = "numOfGuesses">Guesses left: 13</div>
+	</div>
+	<div class = "gameTitle"><h1>Hangman, Buddy!</h1>
+		</div>
+
+</div>
+
+<!--<script type = "text/javascript">
+
+var wordBank = ["Stan", "Cartman", "Kenny", "Kyle", "Butters", "iCentipad", "Smug", "Warcraft", "Towelie", "Bastards", "Timmy", "Tweek", "Authorita", "Hippies", "Panda", "Randy"]
+var resetState = false;
+var numOfGuesses = 13;
+
+function decreaseGuesses(){
+				numOfGuesses = numOfGuesses - 1;
+				document.getElementById("numOfGuesses").innerHTML = numOfGuesses;
+			};
+function letterCheck(event.key){
+	for (var i = 0; i<correctLength; i++){
+				if (userInput == specificWord[i]){
+					console.log(specificWord[i] + " is the right letter!");
+					console.log(emptyArray[i] = userInput);//Should put the correct letter into the empty array
+					//document.getElementById("resetState").onclick = function(){
+					//	resetState = false;
+					//}
+				}
+				else{
+					decreaseGuesses();
+				}
+};
+
+/*while(!resetState){
+	document.getElementById("resetButton").onclick = function(){
+		resetState = true;
+		alert("You have reset");
+	}
+}*/
+
+
+//while(resetState){
+	function startFunction(){
+		window.onkeypress = function(event){
+			showGuesses();
+			var specificWord = Math.floor(Math.random()*wordBank.length);
+			//console.log(event.key);
+			//console.log(event);
+			var userInput = event.key.toLowerCase().toString();
+			//console.log(userInput);
+			if(event.charCode >= 97 && event.charCode <= 122){
+				console.log("You pressed: " + event.key);
+			}
+			else{
+				alert("Please enter a letter from a to z");
+			}
+
+			var specificWord = wordBank[Math.floor(Math.random()*wordBank.length)];
+			alert("Word is:" + specificWord);
+			var correctLength = specificWord.length;
+			var emptyArray = new Array(correctLength);
+			console.log(emptyArray);
+
+			
+				}
+			}
+		}
+	};
+//};
+
+
+</script>-->
+ 
+ <script src="game.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+var wordBank = ["Stan", "Cartman", "Kenny", "Kyle", "Butters", "iCentipad", "Smug", "Warcraft", "Towelie", "Bastards", "Timmy", "Tweek", "Authorita", "Hippies", "Panda", "Randy"]
+var resetState = false;
+var numOfGuesses = 13;
+
+function decreaseGuesses(){
+				numOfGuesses = numOfGuesses - 1;
+				document.getElementById("numOfGuesses").innerHTML = 
+			}
+
+/*while(!resetState){
+	document.getElementById("resetButton").onclick = function(){
+		resetState = true;
+		alert("You have reset");
+	}
+}*/
+
+
+//while(resetState){
+	function startFunction(){
+		window.onkeypress = function(event){
+			showGuesses();
+			var specificWord = Math.floor(Math.random()*wordBank.length);
+			//console.log(event.key);
+			//console.log(event);
+			var userInput = event.key.toLowerCase().toString();
+			//console.log(userInput);
+			if(event.charCode >= 97 && event.charCode <= 122){
+				console.log("You pressed: " + event.key);
+			}
+			else{
+				alert("Please enter a letter from a to z");
+			}
+
+			var specificWord = wordBank[Math.floor(Math.random()*wordBank.length)];
+			alert("Word is:" + specificWord);
+			var correctLength = specificWord.length;
+			var emptyArray = new Array(correctLength);
+			console.log(emptyArray);
+
+			for (var i = 0; i<correctLength; i++){
+				if (userInput == specificWord[i]){
+					
+					console.log(specificWord[i] + " is the right letter!");
+					console.log(emptyArray[i] = userInput);//Should put the correct letter into the empty array
+					//document.getElementById("resetState").onclick = function(){
+					//	resetState = false;
+					//}
+				}
+				else{
+					decreaseGuesses();
+				}
+			}
+		}
+	};
